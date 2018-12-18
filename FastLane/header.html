@@ -1,0 +1,46 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Fast Lane</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li id="Home" class="active"><a href="home.php" onclick="setId('Home')">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li id="corporateSignUp"><a href="corporateSignUp.php" onclick="setId('corporateSignUp')"><span class="glyphicon glyphicon-sign-up" ></span> Corporate SignUp</a></li>
+      <li id="customerSignUp"><a href="customerSignUp.php" onclick="setId('customerSignUp')"><span class="glyphicon glyphicon-sign-up" ></span> Customer SignUp</a></li>
+      <li id="login"><a href="login.php" onclick="setId('login')"><span class="glyphicon glyphicon-log-in" ></span> Log in</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+var id = sessionStorage.getItem("headerId");
+if(id)
+{
+    document.getElementById(id).classList.add("active");
+}
+
+if(id != "Home")
+{
+    document.getElementById("Home").classList.remove('active');
+}
+if(id != "Postad")
+{
+    document.getElementById("Postad").classList.remove('active');
+}
+if(id != "MyPosts")
+{
+    document.getElementById("MyPosts").classList.remove('active');
+}
+if(id != "Search")
+{
+    document.getElementById("Search").classList.remove('active');
+}
+function setId(id)
+{
+  sessionStorage.setItem("headerId", id);
+  document.getElementById(id).classList.add("active");
+}
+
+</script>

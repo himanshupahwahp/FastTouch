@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse" onload="myFunction()">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Fast Lane</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li id="Home"><a href="home.php" onclick="setId('Home')">Home</a></li>
+      <li id="Search"><a href="Search.php" onclick="setId('Search')">Search</a></li>
+      <li><a href="#">My Account</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a><span class="glyphicon glyphicon-user"></span><span id="userId">  </span> </a></li>
+      <li><a href="./../login.php" onclick="logout()"><span class="glyphicon glyphicon-log-out" ></span> Log out</a></li>
+    </ul>
+  </div>
+  <script src="./../js/header.js"></script>
+
+</nav>
